@@ -13,7 +13,9 @@
   <body>
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
-    <p> hi <%= current_user.email %></p>
     <%= yield %>
+    <% if user_signed_in? %>
+      <h2> hi <%= current_user.email %></h2>
+    <% end %>
   </body>
 </html>
