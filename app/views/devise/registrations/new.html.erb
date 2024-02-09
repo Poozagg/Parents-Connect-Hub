@@ -12,7 +12,7 @@
                   input_html: { autocomplete: "profile_picture" }%>
       <%= f.input :location%>
       <%= f.input :no_of_children%>
-      <%= f.input :children_age_range%>
+      <%= f.input :children_age_range, collection: ["0-5", "5-10", "10-15", "15-20", "20-25", "25+"], selected: "Condition"%>
       <%= f.input :email,
                   required: true,
                   autofocus: true,
