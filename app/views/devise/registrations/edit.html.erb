@@ -9,30 +9,18 @@
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "email" }%>
-      <%= f.input :firstname,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "firstname" }%>
-      <%= f.input :lastname,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "lastname" }%>
+      <%= f.input :firstname %>
+      <%= f.input :lastname %>
       <%= f.input :profile_picture,
-                  required: true,
+                  required: false,
                   autofocus: true,
                   input_html: { autocomplete: "profile_picture" }%>
       <%= f.input :location,
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "location" }%>
-      <%= f.input :no_of_children,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "no_of_children" }%>
-      <%= f.input :children_age_range,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "children_age_range" }%>
+      <%= f.input :no_of_children %>
+      <%= f.input :children_age_range %>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
@@ -49,6 +37,8 @@
                   hint: "we need your current password to confirm your changes",
                   required: true,
                   input_html: { autocomplete: "current-password" } %>
+    <%= f.input :about_yourself,
+                  required: false%>
     </div>
 
     <div class="form-actions">
